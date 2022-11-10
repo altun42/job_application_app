@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
 import 'package:job_application_app/modules/login/login_page.dart';
+import 'package:job_application_app/modules/register/register_controller.dart';
 import 'package:job_application_app/shared/widgets/background_image.dart';
 import 'package:job_application_app/shared/widgets/custom_login_button.dart';
 import 'package:job_application_app/shared/widgets/custom_text_button.dart';
@@ -11,11 +11,12 @@ import '../../shared/widgets/custom_subtitle.dart';
 import '../../shared/widgets/custom_text_form_input.dart';
 import '../../shared/widgets/custom_title.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends GetView<RegisterController> {
   const RegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Get.put(RegisterController());
     return Scaffold(
       backgroundColor: Colors.black,
       body: SingleChildScrollView(
@@ -27,21 +28,26 @@ class RegisterPage extends StatelessWidget {
             CustomSubtitle(text: "Create a new account"),
             SizedBox(height: 10),
             CustomTextformInput(
+              controller: controller.UsernameController,
               text: "Username",
               hintText: "Username",
             ),
             SizedBox(height: 6),
             CustomTextformInput(
+              controller: controller.emailController,
               text: "Email",
               hintText: "Email",
             ),
             SizedBox(height: 6),
             CustomTextformInput(
+              controller: controller.numberController,
               text: "Mobile Number",
               hintText: "Mobile Number",
             ),
             SizedBox(height: 6),
             CustomTextformInput(
+              isPassword: 1,
+              controller: controller.passwordController,
               text: "Password",
               hintText: "Password",
             ),

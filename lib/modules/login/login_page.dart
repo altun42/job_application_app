@@ -29,11 +29,14 @@ class LoginPage extends GetView<LoginController> {
             CustomSubtitle(text: "Login to your account"),
             SizedBox(height: 25),
             CustomTextformInput(
+              controller: controller.emailController,
               text: "Email",
               hintText: "Email",
             ),
             SizedBox(height: 6),
             CustomTextformInput(
+              isPassword: 1,
+              controller: controller.passwordController,
               text: "Password",
               hintText: "Password",
             ),
