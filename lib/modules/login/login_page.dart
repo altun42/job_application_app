@@ -24,16 +24,16 @@ class LoginPage extends GetView<LoginController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             BackgroundImage(),
-            SizedBox(height: 51),
+            SizedBox(height: 5.h),
             CustomTitle(text: "Welcome"),
             CustomSubtitle(text: "Login to your account"),
-            SizedBox(height: 25),
+            SizedBox(height: 3.h),
             CustomTextformInput(
               controller: controller.emailController,
               text: "Email",
               hintText: "Email",
             ),
-            SizedBox(height: 6),
+            SizedBox(height: 1.h),
             CustomTextformInput(
               isPassword: 1,
               controller: controller.passwordController,
@@ -41,7 +41,7 @@ class LoginPage extends GetView<LoginController> {
               hintText: "Password",
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 30, top: 7),
+              padding: EdgeInsets.only(right: 8.w, top: 1.h),
               child: Align(
                 alignment: Alignment.topRight,
                 child: CustomTextButton(
@@ -54,13 +54,13 @@ class LoginPage extends GetView<LoginController> {
               ),
             ),
             SizedBox(
-              height: 28,
+              height: 3.5.h,
             ),
             CustomLoginButton(
               ontop: () {},
             ),
             SizedBox(
-              height: 14,
+              height: 2.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -73,7 +73,7 @@ class LoginPage extends GetView<LoginController> {
                   text: "Don't have account?",
                 ),
                 SizedBox(
-                  width: 6,
+                  width: 2.w,
                 ),
                 Text(
                   "Create now",
@@ -81,20 +81,20 @@ class LoginPage extends GetView<LoginController> {
                     color: Colors.white,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                    fontSize: 16.5.sp,
                   ),
                 )
               ],
             ),
             SizedBox(
-              height: 49,
+              height: 5.5.h,
             ),
             Center(
               child: Bounceable(
                   onTap: () {},
                   child: Container(
-                    width: 31.61,
-                    height: 30,
+                    width: 31.61.w,
+                    height: 4.5.h,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("assets/images/googleLogo.png")),

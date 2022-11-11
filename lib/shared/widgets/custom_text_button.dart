@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CustomTextButton extends StatelessWidget {
   final Color? color;
@@ -18,7 +19,7 @@ class CustomTextButton extends StatelessWidget {
           color: color,
           fontFamily: "Poppins",
           fontWeight: FontWeight.w500,
-          fontSize: 16,
+          fontSize: 16.5.sp,
         ),
         textAlign: TextAlign.center,
       ),

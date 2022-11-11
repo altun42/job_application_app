@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CustomLoginButton extends StatelessWidget {
   final Function()? ontop;
@@ -11,8 +12,8 @@ class CustomLoginButton extends StatelessWidget {
       child: Bounceable(
         onTap: ontop,
         child: Container(
-          height: 48,
-          width: 295,
+          height: 6.5.h,
+          width: 70.w,
           decoration: BoxDecoration(
             color: Color(0xff29B6F6),
             borderRadius: BorderRadius.circular(22),
@@ -21,7 +22,7 @@ class CustomLoginButton extends StatelessWidget {
             child: Text(
               "Login",
               style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 19.sp,
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w500,
                   color: Colors.white),

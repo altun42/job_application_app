@@ -6,6 +6,7 @@ import 'package:job_application_app/modules/register/register_controller.dart';
 import 'package:job_application_app/shared/widgets/background_image.dart';
 import 'package:job_application_app/shared/widgets/custom_login_button.dart';
 import 'package:job_application_app/shared/widgets/custom_text_button.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../shared/widgets/custom_subtitle.dart';
 import '../../shared/widgets/custom_text_form_input.dart';
@@ -26,25 +27,25 @@ class RegisterPage extends GetView<RegisterController> {
             BackgroundImage(),
             CustomTitle(text: "Register"),
             CustomSubtitle(text: "Create a new account"),
-            SizedBox(height: 10),
+            SizedBox(height: 1.5.h),
             CustomTextformInput(
               controller: controller.UsernameController,
               text: "Username",
               hintText: "Username",
             ),
-            SizedBox(height: 6),
+            SizedBox(height: 0.7.h),
             CustomTextformInput(
               controller: controller.emailController,
               text: "Email",
               hintText: "Email",
             ),
-            SizedBox(height: 6),
+            SizedBox(height: 0.7.h),
             CustomTextformInput(
               controller: controller.numberController,
               text: "Mobile Number",
               hintText: "Mobile Number",
             ),
-            SizedBox(height: 6),
+            SizedBox(height: 0.7.h),
             CustomTextformInput(
               isPassword: 1,
               controller: controller.passwordController,
@@ -52,11 +53,11 @@ class RegisterPage extends GetView<RegisterController> {
               hintText: "Password",
             ),
             SizedBox(
-              height: 28,
+              height: 3.h,
             ),
             CustomLoginButton(ontop: () {}),
             SizedBox(
-              height: 1,
+              height: 1.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -69,7 +70,7 @@ class RegisterPage extends GetView<RegisterController> {
                   },
                 ),
                 SizedBox(
-                  width: 6,
+                  width: 2.w,
                 ),
                 Text(
                   "Login",
@@ -77,7 +78,7 @@ class RegisterPage extends GetView<RegisterController> {
                     color: Colors.white,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
+                    fontSize: 16.5.sp,
                   ),
                 )
               ],
